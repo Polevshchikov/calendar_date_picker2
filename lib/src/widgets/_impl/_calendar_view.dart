@@ -189,7 +189,7 @@ class _CalendarViewState extends State<_CalendarView> {
 
   /// True if the earliest allowable month is displayed.
   bool get _isDisplayingFirstMonth {
-    return widget.config.hideLastMonthIcon == true ||
+    return widget.config.hideNextMonthIcon == true ||
         !_currentMonth.isAfter(
           DateTime(widget.config.firstDate.year, widget.config.firstDate.month),
         );
