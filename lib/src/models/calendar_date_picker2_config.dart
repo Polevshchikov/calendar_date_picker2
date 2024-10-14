@@ -656,6 +656,8 @@ class CalendarDatePicker2WithActionButtonsConfig
     Axis? dayModeScrollDirection,
     SelectedRangeHighlightBuilder? selectedRangeHighlightBuilder,
     SelectedRangeDecorationPredicate? selectedRangeDecorationPredicate,
+    bool? hideNextMonthIcon,
+    bool? hideLastMonthIcon,
     this.gapBetweenCalendarAndButtons,
     this.cancelButtonTextStyle,
     this.cancelButton,
@@ -665,8 +667,6 @@ class CalendarDatePicker2WithActionButtonsConfig
     this.closeDialogOnCancelTapped,
     this.closeDialogOnOkTapped,
     this.buttonPadding,
-    this.hideNextMonthIcon,
-    this.hideLastMonthIcon,
   }) : super(
           calendarType: calendarType,
           firstDate: firstDate,
@@ -765,10 +765,6 @@ class CalendarDatePicker2WithActionButtonsConfig
 
   /// Custom wrapping padding for Ok & Cancel buttons
   final EdgeInsets? buttonPadding;
-
-  final bool? hideNextMonthIcon;
-
-  final bool? hideLastMonthIcon;
 
   @override
   CalendarDatePicker2WithActionButtonsConfig copyWith({
