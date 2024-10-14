@@ -189,16 +189,18 @@ class _CalendarViewState extends State<_CalendarView> {
 
   /// True if the earliest allowable month is displayed.
   bool get _isDisplayingFirstMonth {
-    return !_currentMonth.isAfter(
-      DateTime(widget.config.firstDate.year, widget.config.firstDate.month),
-    );
+    return widget.config.hideLastMonthIcon == true ||
+        !_currentMonth.isAfter(
+          DateTime(widget.config.firstDate.year, widget.config.firstDate.month),
+        );
   }
 
   /// True if the latest allowable month is displayed.
   bool get _isDisplayingLastMonth {
-    return !_currentMonth.isBefore(
-      DateTime(widget.config.lastDate.year, widget.config.lastDate.month),
-    );
+    return widget.config.hideLastMonthIcon == true ||
+        !_currentMonth.isBefore(
+          DateTime(widget.config.lastDate.year, widget.config.lastDate.month),
+        );
   }
 
   /// Handler for when the overall day grid obtains or loses focus.

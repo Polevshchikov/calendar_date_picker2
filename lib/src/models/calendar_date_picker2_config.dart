@@ -184,6 +184,8 @@ class CalendarDatePicker2Config {
     this.dayModeScrollDirection,
     this.selectedRangeHighlightBuilder,
     this.selectedRangeDecorationPredicate,
+    this.hideNextMonthIcon,
+    this.hideLastMonthIcon,
   })  : calendarType = calendarType ?? CalendarDatePicker2Type.single,
         firstDate = DateUtils.dateOnly(firstDate ?? DateTime(1970)),
         lastDate =
@@ -403,6 +405,10 @@ class CalendarDatePicker2Config {
   /// Predicate to determine the day widget box decoration for a day in selected range
   final SelectedRangeDecorationPredicate? selectedRangeDecorationPredicate;
 
+  final bool? hideNextMonthIcon;
+
+  final bool? hideLastMonthIcon;
+
   /// Copy the current [CalendarDatePicker2Config] with some new values
   CalendarDatePicker2Config copyWith({
     CalendarDatePicker2Type? calendarType,
@@ -472,6 +478,8 @@ class CalendarDatePicker2Config {
     Axis? dayModeScrollDirection,
     SelectedRangeHighlightBuilder? selectedRangeHighlightBuilder,
     SelectedRangeDecorationPredicate? selectedRangeDecorationPredicate,
+    bool? hideNextMonthIcon,
+    bool? hideLastMonthIcon,
   }) {
     return CalendarDatePicker2Config(
       calendarType: calendarType ?? this.calendarType,
@@ -571,6 +579,8 @@ class CalendarDatePicker2Config {
           selectedRangeHighlightBuilder ?? this.selectedRangeHighlightBuilder,
       selectedRangeDecorationPredicate: selectedRangeDecorationPredicate ??
           this.selectedRangeDecorationPredicate,
+      hideNextMonthIcon: hideNextMonthIcon ?? this.hideNextMonthIcon,
+      hideLastMonthIcon: hideLastMonthIcon ?? this.hideLastMonthIcon,
     );
   }
 }
@@ -655,6 +665,8 @@ class CalendarDatePicker2WithActionButtonsConfig
     this.closeDialogOnCancelTapped,
     this.closeDialogOnOkTapped,
     this.buttonPadding,
+    this.hideNextMonthIcon,
+    this.hideLastMonthIcon,
   }) : super(
           calendarType: calendarType,
           firstDate: firstDate,
@@ -723,6 +735,8 @@ class CalendarDatePicker2WithActionButtonsConfig
           dayModeScrollDirection: dayModeScrollDirection,
           selectedRangeHighlightBuilder: selectedRangeHighlightBuilder,
           selectedRangeDecorationPredicate: selectedRangeDecorationPredicate,
+          hideNextMonthIcon: hideNextMonthIcon,
+          hideLastMonthIcon: hideLastMonthIcon,
         );
 
   /// The gap between calendar and action buttons
@@ -751,6 +765,10 @@ class CalendarDatePicker2WithActionButtonsConfig
 
   /// Custom wrapping padding for Ok & Cancel buttons
   final EdgeInsets? buttonPadding;
+
+  final bool? hideNextMonthIcon;
+
+  final bool? hideLastMonthIcon;
 
   @override
   CalendarDatePicker2WithActionButtonsConfig copyWith({
@@ -830,6 +848,8 @@ class CalendarDatePicker2WithActionButtonsConfig
     Axis? dayModeScrollDirection,
     SelectedRangeHighlightBuilder? selectedRangeHighlightBuilder,
     SelectedRangeDecorationPredicate? selectedRangeDecorationPredicate,
+    bool? hideNextMonthIcon,
+    bool? hideLastMonthIcon,
   }) {
     return CalendarDatePicker2WithActionButtonsConfig(
       calendarType: calendarType ?? this.calendarType,
@@ -942,6 +962,8 @@ class CalendarDatePicker2WithActionButtonsConfig
           selectedRangeHighlightBuilder ?? this.selectedRangeHighlightBuilder,
       selectedRangeDecorationPredicate: selectedRangeDecorationPredicate ??
           this.selectedRangeDecorationPredicate,
+      hideNextMonthIcon: hideNextMonthIcon ?? this.hideNextMonthIcon,
+      hideLastMonthIcon: hideLastMonthIcon ?? this.hideLastMonthIcon,
     );
   }
 }
